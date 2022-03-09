@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/lenovo/.gradle/caches/transforms-3/a9a0c38cbb2805991d257400b4451b75/transformed/material-1.5.0/res/layout/test_toolbar.xml" value="0.1" />
+        <entry key="..\:/Users/lenovo/AndroidStudioProjects/Spacex/app/src/main/res/drawable/bgd_blue_transparent.xml" value="0.1935" />
+        <entry key="..\:/Users/lenovo/AndroidStudioProjects/Spacex/app/src/main/res/drawable/bgd_gold_rounded.xml" value="0.1935" />
+        <entry key="..\:/Users/lenovo/AndroidStudioProjects/Spacex/app/src/main/res/drawable/bgd_progress.xml" value="0.1935" />
+        <entry key="..\:/Users/lenovo/AndroidStudioProjects/Spacex/app/src/main/res/drawable/bgd_semi_transparent.xml" value="0.1935" />
+        <entry key="..\:/Users/lenovo/AndroidStudioProjects/Spacex/app/src/main/res/drawable/bgd_white_rounded_top.xml" value="0.1935" />
+        <entry key="..\:/Users/lenovo/AndroidStudioProjects/Spacex/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1935" />
+        <entry key="..\:/Users/lenovo/AndroidStudioProjects/Spacex/app/src/main/res/drawable/oval_gold.xml" value="0.1125" />
+        <entry key="..\:/Users/lenovo/AndroidStudioProjects/Spacex/app/src/main/res/layout/activity_main.xml" value="0.19880290722530997" />
+        <entry key="..\:/Users/lenovo/AndroidStudioProjects/Spacex/app/src/main/res/layout/blocks_loading_view.xml" value="0.19880290722530997" />
+        <entry key="..\:/Users/lenovo/AndroidStudioProjects/Spacex/app/src/main/res/layout/fragment_launch_details.xml" value="0.19880290722530997" />
+        <entry key="..\:/Users/lenovo/AndroidStudioProjects/Spacex/app/src/main/res/layout/fragment_launches_list.xml" value="0.4" />
+        <entry key="..\:/Users/lenovo/AndroidStudioProjects/Spacex/app/src/main/res/layout/fragment_rocket_details.xml" value="0.264" />
+        <entry key="..\:/Users/lenovo/AndroidStudioProjects/Spacex/app/src/main/res/layout/item_category.xml" value="0.4" />
+        <entry key="..\:/Users/lenovo/AndroidStudioProjects/Spacex/app/src/main/res/layout/item_launch.xml" value="0.3875" />
+        <entry key="..\:/Users/lenovo/AndroidStudioProjects/Spacex/app/src/main/res/layout/loading_frame_default.xml" value="0.19880290722530997" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.536" />
+      </ProjectState>
+    </option>
+  </component>
+</project>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/launchesListFragment">
+
+    <fragment
+        android:id="@+id/launchesListFragment"
+        android:name="com.spacex.features.launches.LaunchesListFragment"
+        android:label="LaunchesListFragment" >
+        <action
+            android:id="@+id/action_launchesListFragment_to_rocketDetailsFragment"
+            app:destination="@id/rocketDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/rocketDetailsFragment"
+        android:name="com.spacex.features.rocket.RocketDetailsFragment"
+        android:label="RocketDetailsFragment" >
+        <argument
+            android:name="rocketId"
+            app:argType="string" />
+    </fragment>
+</navigation>

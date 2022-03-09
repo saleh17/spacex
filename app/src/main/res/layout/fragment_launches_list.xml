@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/launchesTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_medium"
+        android:layout_marginTop="36dp"
+        android:text="@string/launches"
+        android:fontFamily="@font/lato_bold"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/notificationIv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/spacing_medium"
+        android:src="@mipmap/ic_bell"
+        app:layout_constraintBottom_toBottomOf="@+id/launchesTv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/launchesTv" />
+
+    <ImageView
+        android:id="@+id/searchIv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/spacing_medium"
+        android:src="@mipmap/ic_search"
+        app:layout_constraintBottom_toBottomOf="@+id/launchesTv"
+        app:layout_constraintEnd_toStartOf="@+id/notificationIv"
+        app:layout_constraintTop_toTopOf="@+id/launchesTv" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/launchesRv"
+        android:paddingEnd="@dimen/spacing_normal"
+        android:paddingStart="@dimen/spacing_normal"
+        android:clipToPadding="false"
+        tools:listitem="@layout/item_launch"
+        android:layout_marginTop="@dimen/spacing_xlarge"
+        app:layout_constraintTop_toBottomOf="@+id/launchesTv"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"/>
+
+    <TextView
+        android:id="@+id/notificationCountTv"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@drawable/oval_gold"
+        android:gravity="center"
+        android:text="2"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/notificationIv"
+        app:layout_constraintEnd_toEndOf="@+id/notificationIv"
+        app:layout_constraintStart_toEndOf="@+id/notificationIv"
+        app:layout_constraintTop_toTopOf="@+id/notificationIv" />
+
+    <TextView
+        android:id="@+id/sectionTitleTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_medium"
+        android:layout_marginTop="36dp"
+        android:text="@string/the_big_launch"
+        android:fontFamily="@font/lato_bold"
+        app:layout_constraintTop_toBottomOf="@+id/launchesRv"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/categoriesRv"
+        android:layout_marginStart="20dp"
+        tools:listitem="@layout/item_category"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/sectionTitleTv"
+        android:clipToPadding="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="88dp"
+        android:background="@color/gold_cb"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@id/bgdImageCv" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/bgdImageCv"
+        app:layout_constraintTop_toBottomOf="@+id/categoriesRv"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="@dimen/spacing_normal"
+        android:layout_marginEnd="25dp"
+        android:layout_width="match_parent"
+        app:cardCornerRadius="10dp"
+        android:layout_height="wrap_content">
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:layout_width="match_parent"
+            app:viewAspectRatio="1.5"
+            android:id="@+id/bgdImage"
+            app:progressBarAutoRotateInterval="500"
+            app:progressBarImage="@mipmap/ic_loader"
+            app:progressBarImageScaleType="centerInside"
+            app:overlayImage="@drawable/bgd_semi_transparent"
+
+            android:layout_height="wrap_content"/>
+    </androidx.cardview.widget.CardView>
+
+
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/image"
+        android:layout_width="60dp"
+        app:roundAsCircle="true"
+        android:elevation="5dp"
+        app:progressBarAutoRotateInterval="500"
+        app:progressBarImage="@mipmap/ic_loader"
+        app:progressBarImageScaleType="centerInside"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="22dp"
+        app:roundingBorderColor="@color/gold_cb"
+        app:roundingBorderWidth="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/bgdImageCv"
+        app:layout_constraintStart_toStartOf="@+id/bgdImageCv"
+        app:layout_constraintTop_toBottomOf="@+id/bgdImageCv"
+        app:placeholderImage="@color/grey_300"
+        app:viewAspectRatio="1" />
+
+    <TextView
+        android:id="@+id/doctorNameTv"
+        android:layout_width="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:textColor="@color/white"
+        android:text="ISS geosynchronous and is it stationary"
+        android:textSize="10sp"
+        android:fontFamily="@font/lato_regular"
+        android:layout_marginBottom="3dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/articleNameTv"
+        app:layout_constraintEnd_toEndOf="@+id/bgdImageCv"
+        app:layout_constraintStart_toEndOf="@+id/image" />
+
+    <TextView
+        android:id="@+id/articleNameTv"
+        android:layout_width="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:text="ISS geosynchronous and is it stationary"
+        android:fontFamily="@font/lato_bold"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/bgdImageCv"
+        app:layout_constraintEnd_toEndOf="@+id/bgdImageCv"
+        app:layout_constraintStart_toEndOf="@+id/image" />
+
+    <TextView
+        android:id="@+id/descriptionTv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="@dimen/spacing_large"
+        android:fontFamily="@font/lato_regular"
+        android:layout_marginTop="6dp"
+        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eros enim, dictum vitae quam nec, congue feugiat neque. Vivamus ut luctus enim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eros enim, dictum vitae quam nec, congue feugiat neque. Vivamus ut luctus enim. "
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/bgdImageCv"
+        app:layout_constraintStart_toEndOf="@+id/image"
+        app:layout_constraintTop_toBottomOf="@+id/bgdImageCv" />
+
+    <TextView
+        android:id="@+id/flightNumberTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:text="2355"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image" />
+
+    <TextView
+        android:id="@+id/dateTv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="25dp"
+        android:text="24 Feb 2022 11:25 GMT+5"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@+id/descriptionTv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/flightNumberTv" />
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

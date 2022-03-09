@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:viewAspectRatio="0.73"
+            app:overlayImage="@drawable/bgd_blue_transparent"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/closeIv"
+            android:src="@mipmap/ic_close"
+            android:layout_margin="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="@android:style/Widget.Holo.Light.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_marginStart="@dimen/spacing_xxlarge"
+            android:layout_marginEnd="@dimen/spacing_xxlarge"
+            android:layout_height="3dp"
+            android:layout_marginBottom="24dp"
+            android:progressDrawable="@drawable/bgd_progress"
+            android:indeterminate="false"
+            android:layout_marginTop="@dimen/spacing_tiny"
+            app:layout_constraintBottom_toTopOf="@+id/background"/>
+
+        <View
+            android:id="@+id/background"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            app:layout_constraintBottom_toBottomOf="@+id/image"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:background="@drawable/bgd_white_rounded_top"
+            app:layout_constraintTop_toTopOf="@+id/background"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/nameTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_medium"
+                android:layout_marginTop="@dimen/spacing_medium"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/lato_bold"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toStartOf="@+id/stagesTv"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="@string/launches" />
+
+            <TextView
+                android:id="@+id/stagesTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/spacing_medium"
+                android:layout_marginTop="@dimen/spacing_medium"
+                tools:text="@string/launches"
+                android:fontFamily="@font/lato_bold"
+                android:textColor="@color/blue_13"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:layout_marginTop="14dp"
+                android:id="@+id/separator"
+                android:background="@color/grey_300"
+                android:layout_marginEnd="@dimen/spacing_medium"
+                android:layout_marginStart="@dimen/spacing_medium"
+                app:layout_constraintTop_toBottomOf="@+id/stagesTv"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+
+            <TextView
+                android:id="@+id/dateTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_medium"
+                android:layout_marginTop="@dimen/spacing_medium"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/lato_regular"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/separator"
+                tools:text="date" />
+
+            <TextView
+                android:id="@+id/descriptionTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_medium"
+                android:layout_marginEnd="@dimen/spacing_medium"
+                android:layout_marginTop="@dimen/spacing_medium"
+                android:fontFamily="@font/lato_regular"
+                android:textColor="@color/grey_9d"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dateTv"
+                tools:text="date" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/readMoreBt"
+                android:text="@string/read_more"
+                android:fontFamily="@font/lato_regular"
+                android:layout_marginEnd="@dimen/spacing_medium"
+                android:layout_marginStart="@dimen/spacing_medium"
+                android:textAllCaps="false"
+                android:insetLeft="0dp"
+                android:insetTop="0dp"
+                android:insetRight="0dp"
+                android:insetBottom="0dp"
+                android:textSize="18sp"
+                app:backgroundTint="@color/blue_13"
+                android:layout_marginTop="58dp"
+                android:textColor="@color/white"
+                app:layout_constraintTop_toBottomOf="@+id/descriptionTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/shareTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_medium"
+                android:layout_marginTop="@dimen/spacing_medium"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/lato_semi_bold"
+                android:layout_marginBottom="30dp"
+                android:text="@string/share"
+                android:textColor="@color/gold_cb"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/readMoreBt" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
